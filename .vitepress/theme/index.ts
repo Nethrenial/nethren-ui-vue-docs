@@ -1,12 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import {setColorPallete} from '@nethren-ui/vue'
-// @ts-ignore
-import VuePreview from '../../node_modules/vite-plugin-vue-preview/dist/sfc.js'
+import { setColorPallete } from '@nethren-ui/vue'
 import './style.css'
 import "@nethren-ui/vue/dist/style.css"
-import 'vite-plugin-vue-preview/style.css'
+import { off } from 'process'
 
 export default {
   extends: Theme,
@@ -16,8 +14,9 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
-    setColorPallete()
-    app.component('VuePreview', VuePreview)
+    // ...\
+    if (!import.meta.env.SSR) {
+      setColorPallete()
+    }
   }
 }

@@ -20,7 +20,6 @@ import {
   useCssVars,
   withKeys
 } from "./chunk-G3CMYKT2.js";
-import "./chunk-UGBRVHZY.js";
 
 // node_modules/@nethren-ui/vue/dist/nethren-ui.js
 var P = ["primary", "secondary", "success", "info", "warning", "danger", "light", "dark"];
