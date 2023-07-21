@@ -180,4 +180,5 @@ function setLoading() {
 | Prop | Purpose | Expected values | Default |
 | ---------------- | :-------------- | :--------------- | :------------------- |
 | mode  | To change the mode of the button | 'solid', 'outline', 'text' | 'solid' |
-| color | To set the color scheme of the button | "primary" , "secondary", "success", "danger", "warning", "info", "dark", "light" | "primary" |
+| color | To set the color scheme of the button | [Color scheme value ->](/theme/colors) | "primary" |
+| is-loading | To control the loading status of the button | boolean | false |

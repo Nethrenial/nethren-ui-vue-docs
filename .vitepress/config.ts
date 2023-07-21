@@ -27,6 +27,15 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Theme',
+        items: [
+          {
+            text: 'Colors',
+            link: '/theme/colors'
+          }
+        ]
+      },
+      {
         text: "Components",
         items: [
           {
