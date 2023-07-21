@@ -16,9 +16,9 @@ function setLoading() {
 
 </script>
 
-# Buttons
+# Button
 
-Button is used to trigger some actions
+Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
 
 ## Usage
 
@@ -169,3 +169,15 @@ function setLoading() {
   </n-button>
 </template>
 ```
+
+## Accessibility
+
+- Button has role of button.
+- When Button has focus, Space or Enter activates it.
+
+## Props
+
+| Prop | Purpose | Expected values | Default |
+| ---------------- | :-------------- | :--------------- | :------------------- |
+| mode  | To change the mode of the button | 'solid', 'outline', 'text' | 'solid' |
+| color | To set the color scheme of the button | "primary" , "secondary", "success", "danger", "warning", "info", "dark", "light" | "primary" |

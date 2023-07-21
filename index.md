@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Get started
-      link: /get-started
+      link: /overview/getting-started
     - theme: alt
       text: View on github
       link: https://github.com
