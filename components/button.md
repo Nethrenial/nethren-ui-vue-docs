@@ -56,8 +56,6 @@ import { NButton } from "@nethren-ui/vue";
     <n-button color="info">Info</n-button>
     <n-button color="warning">Warning</n-button>
     <n-button color="danger">Danger</n-button>
-    <n-button color="dark">Dark</n-button>
-    <n-button color="light">Light</n-button>
 </div>
 
 ```vue
@@ -67,8 +65,6 @@ import { NButton } from "@nethren-ui/vue";
 <n-button color="info">Info</n-button>
 <n-button color="warning">Warning</n-button>
 <n-button color="danger">Danger</n-button>
-<n-button color="dark">Dark</n-button>
-<n-button color="light">Light</n-button>
 ```
 
 ## With icons

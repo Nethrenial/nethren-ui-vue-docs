@@ -41,6 +41,19 @@ export default defineConfig({
           {
             text: 'Button',
             link: '/components/button'
+          },
+          {
+            text: 'Switch',
+            link: '/components/switch'
+          },
+          {
+            text: 'Form Components',
+            items: [
+              {
+                text: 'Checkbox',
+                link: '/components/form/checkbox'
+              }
+            ]
           }
         ]
       }

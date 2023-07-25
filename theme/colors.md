@@ -209,6 +209,12 @@ Use the lowercase of each swatch name when setting colors for components as prop
 </div>
 
 
+
+## Configuring the color pallete
+
+In the ```setColorPallete``` function exposed from ```@nethren-ui/vue```, we can pass a configuration object with the full swatch for the colors in color scheme wa want to change.
+
+
 <style>
 
 .swatch  * {
