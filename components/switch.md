@@ -41,23 +41,48 @@ const isChecked = ref(false);
 </div>
 
 ```vue
-<n-switch v-model="isChecked" aria-label="primary" id="primary-switch" color="primary" />
-<n-switch v-model="isChecked" aria-label="secondary" id="secondary-switch" color="secondary" />
-<n-switch v-model="isChecked" aria-label="success" id="success-switch" color="success" />
+<n-switch
+  v-model="isChecked"
+  aria-label="primary"
+  id="primary-switch"
+  color="primary"
+/>
+<n-switch
+  v-model="isChecked"
+  aria-label="secondary"
+  id="secondary-switch"
+  color="secondary"
+/>
+<n-switch
+  v-model="isChecked"
+  aria-label="success"
+  id="success-switch"
+  color="success"
+/>
 <n-switch v-model="isChecked" aria-label="info" id="info-switch" color="info" />
-<n-switch v-model="isChecked" aria-label="warning" id="warning-switch" color="warning" />
-<n-switch v-model="isChecked" aria-label="danger" id="danger-switch" color="danger" />
+<n-switch
+  v-model="isChecked"
+  aria-label="warning"
+  id="warning-switch"
+  color="warning"
+/>
+<n-switch
+  v-model="isChecked"
+  aria-label="danger"
+  id="danger-switch"
+  color="danger"
+/>
 ```
 
 ## Accessibility
 
 - Switch has role of switch.
 - When Switch has focus, Space or Enter activates it.
-- using  ```aria-label``` attribute is a must when not using any visible label
+- using `aria-label` attribute is a must when not using any visible label
 
 ## Props
 
-| Prop    | Purpose                               | Expected values                                                            | Default                      |
-| ------- | :------------------------------------ | :------------------------------------------------------------------------- | :--------------------------- |
-| color   | To set the color scheme of the switch | [Color scheme value ->](/theme/colors)                                     | "primary"                    |
-| v-model | To bind the switch status             | Boolean (Need to be a vue ref values, ex: `const isEnabled = ref(false)` ) | None (Mandatory to be given) |
+| Prop    | Purpose                    | Expected values                                                            | Default                 |
+| ------- | :------------------------- | :------------------------------------------------------------------------- | :---------------------- |
+| color   | Color scheme of the switch | [Color scheme value ->](/theme/colors)                                     | "primary"               |
+| v-model | Switch status              | Boolean (Need to be a vue ref value, ex: `const isEnabled = ref(false)` ) | None (Must to be given) |
