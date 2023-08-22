@@ -67,6 +67,24 @@ import { NButton } from "@nethren-ui/vue";
 <n-button color="danger">Danger</n-button>
 ```
 
+## Different Sizes
+
+<div class="gallery">
+    <n-button size="sm">sm button</n-button>
+    <n-button size="md">md button</n-button>
+    <n-button size="normal">normal button</n-button>
+    <n-button size="lg">lg button</n-button>
+    <n-button size="xl">xl button</n-button>
+</div>
+
+```vue
+<n-button size="sm">Medium button</n-button>
+<n-button size="md">Secondary</n-button>
+<n-button size="normal">normal button</n-button>
+<n-button size="lg">lg button</n-button>
+<n-button size="xl">xl button</n-button>
+```
+
 ## With icons
 
 NButton provides two slots for icons.You can use any sort of icon you like here (svg, emoji, icon fonts etc).
@@ -168,13 +186,15 @@ function setLoading() {
 
 ## Accessibility
 
-- Button has role of button.
+- Button has a role of button.
 - When Button has focus, Space or Enter activates it.
 
 ## Props
 
-| Prop | Purpose | Expected values | Default |
-| ---------------- | :-------------- | :--------------- | :------------------- |
-| mode  | To change the mode of the button | 'solid', 'outline', 'text' | 'solid' |
-| color | To set the color scheme of the button | [Color scheme value ->](/theme/colors) | "primary" |
-| is-loading | To control the loading status of the button | boolean | false |
+| Prop         | Purpose                       | Expected values                        | Default   |
+| ------------ | :---------------------------- | :------------------------------------- | :-------- |
+| mode         | mode of the button            | 'solid', 'outline', 'text'             | 'solid'   |
+| color        | color scheme of the button    | [Color scheme value ->](/theme/colors) | "primary" |
+| size         | size of the button            | 'sm', 'md'. 'normal', 'lg', 'xl'       | "normal"  |
+| is-loading   | Set loading state             | boolean                                | false     |
+| loading-text | Test to show in loading state | string                                 | undefined |

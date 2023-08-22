@@ -19,7 +19,7 @@ features:
     title: Customizable
     details: Customize colors, border-radius, shapes etc
   - icon:
-      src: ./assets/images/typescript.svg
+      src: /images/typescript.svg
     title: Typescript support
     details: Great DX with full typescript support
   - icon: 🚀
