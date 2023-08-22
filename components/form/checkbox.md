@@ -7,7 +7,7 @@ const isChecked = ref(false)
 
 # Checkbox
 
-Checkbox component is used to mark something as enabled or disabled (ex: Remember me).
+Checkbox component is used to mark something as enabled or disabled (ex: Remember me) or choose one or multiple choices for a multiple choice question/form field.
 
 ## Usage
 

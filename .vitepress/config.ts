@@ -1,7 +1,12 @@
-import { defineConfig } from 'vitepress'
+import { HeadConfig, defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  transformHead: () => {
+    const head: HeadConfig[] = []
+    head.push(['meta', { name: 'google-site-verification', content: 'RW3gvFxppusEgWCFFxXtXuWgUjhaynRf9SQUHKtuf6A' }])
+    return head
+  },
   title: "Nethren UI - Vue 3 Edition",
   description: "Nethren-UI is a reusable component library providing attractive and accessible ui components",
   themeConfig: {
@@ -52,6 +57,10 @@ export default defineConfig({
               {
                 text: 'Checkbox',
                 link: '/components/form/checkbox'
+              },
+              {
+                text: 'Input',
+                link: '/components/form/input'
               }
             ]
           }
