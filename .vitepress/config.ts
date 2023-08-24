@@ -2,11 +2,16 @@ import { HeadConfig, defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  transformHead: () => {
-    const head: HeadConfig[] = []
-    head.push(['meta', { name: 'google-site-verification', content: 'RW3gvFxppusEgWCFFxXtXuWgUjhaynRf9SQUHKtuf6A' }])
-    return head
+  transformHead: (ctx) => {
+    // const head: HeadConfig[] = []
+    ctx.head.push(['meta', { name: 'google-site-verification', content: 'RW3gvFxppusEgWCFFxXtXuWgUjhaynRf9SQUHKtuf6A' }])
+    return ctx.head
   },
+
+  sitemap: {
+    hostname: 'https://nethren-ui-vue-docs.pages.dev'
+  },
+
   title: "Nethren UI - Vue 3 Edition",
   description: "Nethren-UI is a reusable component library providing attractive and accessible ui components",
   themeConfig: {

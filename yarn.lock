@@ -276,10 +276,10 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
-"@nethren-ui/vue@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@nethren-ui/vue/-/vue-0.0.5.tgz#e4b1c8c206958ece3922f1607ce2335d1b073368"
-  integrity sha512-ZdJwm0mrsJA4n9m7zFyOW3SahESj5ZOq5taJhXFWuv9moJD9RODt2SlvVBXnktNwH+4u7dsRN9U79rJqZuJcUg==
+"@nethren-ui/vue@^0.0.5-alpha.5":
+  version "0.0.5-alpha.5"
+  resolved "https://registry.yarnpkg.com/@nethren-ui/vue/-/vue-0.0.5-alpha.5.tgz#f0c19c402f18a12102c253d61417ff5b9361fb90"
+  integrity sha512-rc3scQVtrLXnO+mMcnNXLTdkaUbZZ6bE/TELE2EOKtzr6YjUv+qkzLiCg9wRgOze/JMzrgiBJEjNtt1OhCYsqw==
   dependencies:
     vue "^3.2.47"
 

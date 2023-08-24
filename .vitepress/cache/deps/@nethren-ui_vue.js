@@ -20,17 +20,18 @@ import {
   toRefs,
   unref,
   useCssVars,
+  useSlots,
   withCtx,
   withKeys
 } from "./chunk-G3CMYKT2.js";
 
 // node_modules/@nethren-ui/vue/dist/nethren-ui.js
-var j = {
+var G = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 24 24",
   class: "n-button__spinner"
 };
-var z = createBaseVNode("path", {
+var X = createBaseVNode("path", {
   fill: "currentColor",
   d: "M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
 }, [
@@ -42,18 +43,18 @@ var z = createBaseVNode("path", {
     values: "0 12 12;360 12 12"
   })
 ], -1);
-var W = [
-  z
+var Y = [
+  X
 ];
-var D = defineComponent({
+var F = defineComponent({
   __name: "CircleSpinner",
   setup(e) {
     return defineComponent({
       name: "CircleSpinner"
-    }), (s, a) => (openBlock(), createElementBlock("svg", j, W));
+    }), (s, l) => (openBlock(), createElementBlock("svg", G, Y));
   }
 });
-var G = defineComponent({
+var J = defineComponent({
   __name: "NButton",
   props: {
     mode: { default: "solid" },
@@ -63,33 +64,33 @@ var G = defineComponent({
     size: { default: "normal" }
   },
   setup(e) {
-    const s = e, { color: a, mode: n, isLoading: o, loadingText: c, size: i } = toRefs(s);
-    return (l, d) => (openBlock(), createElementBlock("button", {
-      class: normalizeClass(["n-button", [`n--${unref(a)}`, `n-button--${unref(a)}`, `n-button--${unref(i)}`, `n-button--${unref(n)}`, unref(o) ? "n-button--loading" : ""]])
+    const s = e, { color: l, mode: n, isLoading: o, loadingText: i, size: u } = toRefs(s);
+    return (a, r) => (openBlock(), createElementBlock("button", {
+      class: normalizeClass(["n-button", [`n--${unref(l)}`, `n-button--${unref(l)}`, `n-button--${unref(u)}`, `n-button--${unref(n)}`, unref(o) ? "n-button--loading" : ""]])
     }, [
-      unref(o) ? (openBlock(), createBlock(D, {
+      unref(o) ? (openBlock(), createBlock(F, {
         key: 0,
         class: "n-button__spinner"
       })) : createCommentVNode("", true),
-      unref(o) ? createCommentVNode("", true) : renderSlot(l.$slots, "leftIcon", { key: 1 }),
-      !unref(o) || unref(o) && !unref(c) ? renderSlot(l.$slots, "default", { key: 2 }) : createCommentVNode("", true),
-      createTextVNode(" " + toDisplayString(unref(o) && unref(c) ? unref(c) : "") + " ", 1),
-      unref(o) ? createCommentVNode("", true) : renderSlot(l.$slots, "rightIcon", {
+      unref(o) ? createCommentVNode("", true) : renderSlot(a.$slots, "leftIcon", { key: 1 }),
+      !unref(o) || unref(o) && !unref(i) ? renderSlot(a.$slots, "default", { key: 2 }) : createCommentVNode("", true),
+      createTextVNode(" " + toDisplayString(unref(o) && unref(i) ? unref(i) : "") + " ", 1),
+      unref(o) ? createCommentVNode("", true) : renderSlot(a.$slots, "rightIcon", {
         key: 3,
         class: "n-button__icon"
       })
     ], 2));
   }
 });
-var Ee = {
+var je = {
   install(e) {
-    e.component("n-button", G);
+    e.component("n-button", J);
   }
 };
-var X = ["aria-label", "aria-checked", "onKeydown", "onKeyup", "for"];
-var F = ["value"];
-var J = createBaseVNode("span", { class: "n-switch__thumb" }, null, -1);
-var Q = defineComponent({
+var Q = ["aria-label", "aria-checked", "onKeydown", "onKeyup", "for"];
+var U = ["value"];
+var ee = createBaseVNode("span", { class: "n-switch__thumb" }, null, -1);
+var te = defineComponent({
   inheritAttrs: false,
   __name: "NSwitch",
   props: {
@@ -98,41 +99,41 @@ var Q = defineComponent({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: s }) {
-    const a = e, { modelValue: n, color: o } = toRefs(a);
-    function c(f) {
-      if (f instanceof KeyboardEvent) {
-        if (f.repeat)
+    const l = e, { modelValue: n, color: o } = toRefs(l);
+    function i(p) {
+      if (p instanceof KeyboardEvent) {
+        if (p.repeat)
           return;
-        d();
+        r();
       }
       s("update:modelValue", !n.value);
     }
-    const i = ref(false), l = ref("right");
-    function d() {
-      i.value = true, n.value ? l.value = "right" : l.value = "left";
+    const u = ref(false), a = ref("right");
+    function r() {
+      u.value = true, n.value ? a.value = "right" : a.value = "left";
     }
     function h() {
-      i.value = false;
+      u.value = false;
     }
-    const k = computed(() => i.value ? `n-switch--hold-${l.value}` : "");
-    return (f, C) => (openBlock(), createElementBlock("label", {
-      class: normalizeClass(["n-switch", [`n--${unref(o)}`, `n-switch--${unref(o)}`, unref(n) ? "n-switch--checked" : "", i.value ? "n-switch--hold" : "", k.value]]),
+    const C = computed(() => u.value ? `n-switch--hold-${a.value}` : "");
+    return (p, x) => (openBlock(), createElementBlock("label", {
+      class: normalizeClass(["n-switch", [`n--${unref(o)}`, `n-switch--${unref(o)}`, unref(n) ? "n-switch--checked" : "", u.value ? "n-switch--hold" : "", C.value]]),
       tabindex: "0",
       role: "switch",
-      "aria-label": f.$attrs["aria-label"],
+      "aria-label": p.$attrs["aria-label"],
       "aria-checked": unref(n),
       onKeydown: [
-        withKeys(c, ["enter"]),
-        withKeys(c, ["space"])
+        withKeys(i, ["enter"]),
+        withKeys(i, ["space"])
       ],
       onKeyup: [
         withKeys(h, ["enter"]),
         withKeys(h, ["space"])
       ],
-      onClick: c,
-      onMousedown: d,
+      onClick: i,
+      onMousedown: r,
       onMouseup: h,
-      for: f.$attrs.id
+      for: p.$attrs.id
     }, [
       createBaseVNode("input", mergeProps({
         type: "checkbox",
@@ -141,31 +142,31 @@ var Q = defineComponent({
         "aria-disabled": "false",
         disabled: "",
         value: unref(n)
-      }, f.$attrs, { "aria-label": "" }), null, 16, F),
-      J
-    ], 42, X));
+      }, p.$attrs, { "aria-label": "" }), null, 16, U),
+      ee
+    ], 42, Q));
   }
 });
-var qe = {
+var ze = {
   install(e) {
-    e.component("n-switch", Q);
+    e.component("n-switch", te);
   }
 };
-var U = (e) => (pushScopeId("data-v-3ef5a0ce"), e = e(), popScopeId(), e);
-var Y = {
+var oe = (e) => (pushScopeId("data-v-30532f98"), e = e(), popScopeId(), e);
+var ne = {
   width: "24",
   height: "24",
   viewBox: "0 0 100 100"
 };
-var ee = U(() => createBaseVNode("path", {
+var se = oe(() => createBaseVNode("path", {
   d: "M20 50 L45 75 L80 30",
   stroke: "black",
   fill: "transparent"
 }, null, -1));
-var te = [
-  ee
+var le = [
+  se
 ];
-var oe = defineComponent({
+var ae = defineComponent({
   __name: "AnimatedCheckmark",
   props: {
     strokeColor: { default: "white" }
@@ -173,22 +174,22 @@ var oe = defineComponent({
   setup(e) {
     const s = e;
     useCssVars((n) => ({
-      "55f76663": unref(a)
+      "19e33ec7": unref(l)
     }));
-    const { strokeColor: a } = toRefs(s);
-    return (n, o) => (openBlock(), createElementBlock("svg", Y, te));
+    const { strokeColor: l } = toRefs(s);
+    return (n, o) => (openBlock(), createElementBlock("svg", ne, le));
   }
 });
-var I = (e, s) => {
-  const a = e.__vccOpts || e;
+var E = (e, s) => {
+  const l = e.__vccOpts || e;
   for (const [n, o] of s)
-    a[n] = o;
-  return a;
+    l[n] = o;
+  return l;
 };
-var ne = I(oe, [["__scopeId", "data-v-3ef5a0ce"]]);
-var se = ["aria-label", "aria-checked", "onKeydown", "onKeyup", "for"];
-var ae = ["value"];
-var le = defineComponent({
+var ce = E(ae, [["__scopeId", "data-v-30532f98"]]);
+var ie = ["aria-label", "aria-checked", "onKeydown", "onKeyup", "for"];
+var re = ["value"];
+var ue = defineComponent({
   inheritAttrs: false,
   __name: "NCheckbox",
   props: {
@@ -197,42 +198,42 @@ var le = defineComponent({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: s }) {
-    const a = e, { modelValue: n } = toRefs(a);
-    function o(d) {
-      if (d instanceof KeyboardEvent) {
-        if (d.repeat)
+    const l = e, { modelValue: n } = toRefs(l);
+    function o(r) {
+      if (r instanceof KeyboardEvent) {
+        if (r.repeat)
           return;
-        i();
+        u();
       }
       s("update:modelValue", !n.value);
     }
-    const c = ref(false);
-    function i() {
-      c.value = true;
+    const i = ref(false);
+    function u() {
+      i.value = true;
     }
-    function l() {
-      c.value = false;
+    function a() {
+      i.value = false;
     }
-    return (d, h) => (openBlock(), createElementBlock("label", {
-      class: normalizeClass(["n-checkbox", [`n--${d.color}`, `n-checkbox--${d.color}`, unref(n) ? "n-checkbox--checked" : "", c.value ? "n-checkbox--hold" : ""]]),
+    return (r, h) => (openBlock(), createElementBlock("label", {
+      class: normalizeClass(["n-checkbox", [`n--${r.color}`, `n-checkbox--${r.color}`, unref(n) ? "n-checkbox--checked" : "", i.value ? "n-checkbox--hold" : ""]]),
       tabindex: "0",
       role: "checkbox",
-      "aria-label": d.$attrs["aria-label"],
+      "aria-label": r.$attrs["aria-label"],
       "aria-checked": unref(n),
       onKeydown: [
         withKeys(o, ["enter"]),
         withKeys(o, ["space"])
       ],
       onKeyup: [
-        withKeys(l, ["enter"]),
-        withKeys(l, ["space"])
+        withKeys(a, ["enter"]),
+        withKeys(a, ["space"])
       ],
       onClick: o,
-      onMousedown: i,
-      onMouseup: l,
-      for: d.$attrs.id
+      onMousedown: u,
+      onMouseup: a,
+      for: r.$attrs.id
     }, [
-      unref(n) ? (openBlock(), createBlock(ne, {
+      unref(n) ? (openBlock(), createBlock(ce, {
         key: 0,
         class: "n-checkbox__check",
         "stroke-color": "var(--n-component-normal-text-color)"
@@ -240,70 +241,79 @@ var le = defineComponent({
       createBaseVNode("input", mergeProps({
         type: "checkbox",
         class: "n-checkbox__input"
-      }, d.$attrs, {
+      }, r.$attrs, {
         "aria-invalid": "false",
         "aria-disabled": "false",
         disabled: "",
         value: unref(n),
         "aria-label": ""
-      }), null, 16, ae)
-    ], 42, se));
+      }), null, 16, re)
+    ], 42, ie));
   }
 });
-var He = {
+var We = {
   install(e) {
-    e.component("n-switch", le);
+    e.component("n-switch", ue);
   }
 };
-var ce = {
+var de = {
   name: "OpenEye"
 };
-var re = {
+var _e = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
   viewBox: "0 0 24 24"
 };
-var ie = createBaseVNode("path", {
+var fe = createBaseVNode("path", {
   fill: "currentColor",
   d: "M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0Z"
 }, null, -1);
-var de = [
-  ie
+var pe = [
+  fe
 ];
-function ue(e, s, a, n, o, c) {
-  return openBlock(), createElementBlock("svg", re, de);
+function he(e, s, l, n, o, i) {
+  return openBlock(), createElementBlock("svg", _e, pe);
 }
-var _e = I(ce, [["render", ue]]);
-var fe = {
+var me = E(de, [["render", he]]);
+var be = {
   name: "ClosedEye"
 };
-var pe = {
+var ye = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
   viewBox: "0 0 24 24"
 };
-var he = createBaseVNode("path", {
+var ve = createBaseVNode("path", {
   fill: "currentColor",
   d: "M2 5.27L3.28 4L20 20.72L18.73 22l-3.08-3.08c-1.15.38-2.37.58-3.65.58c-5 0-9.27-3.11-11-7.5c.69-1.76 1.79-3.31 3.19-4.54L2 5.27M12 9a3 3 0 0 1 3 3a3 3 0 0 1-.17 1L11 9.17A3 3 0 0 1 12 9m0-4.5c5 0 9.27 3.11 11 7.5a11.79 11.79 0 0 1-4 5.19l-1.42-1.43A9.862 9.862 0 0 0 20.82 12A9.821 9.821 0 0 0 12 6.5c-1.09 0-2.16.18-3.16.5L7.3 5.47c1.44-.62 3.03-.97 4.7-.97M3.18 12A9.821 9.821 0 0 0 12 17.5c.69 0 1.37-.07 2-.21L11.72 15A3.064 3.064 0 0 1 9 12.28L5.6 8.87c-.99.85-1.82 1.91-2.42 3.13Z"
 }, null, -1);
-var me = [
-  he
+var ge = [
+  ve
 ];
-function be(e, s, a, n, o, c) {
-  return openBlock(), createElementBlock("svg", pe, me);
+function $e(e, s, l, n, o, i) {
+  return openBlock(), createElementBlock("svg", ye, ge);
 }
-var ye = I(fe, [["render", be]]);
-var ve = ["for"];
-var $e = {
+var we = E(be, [["render", $e]]);
+var ke = ["for"];
+var Ce = {
   key: 0,
   class: "n-input__required-indicator"
 };
-var ge = ["type", "value"];
-var we = { key: 1 };
-var ke = { class: "n-input__error" };
-var Ce = defineComponent({
+var xe = { class: "n-input__icon-wrap" };
+var Ne = {
+  key: 0,
+  class: "n-input__left-icon"
+};
+var Ie = ["type", "value"];
+var Me = {
+  key: 2,
+  class: "n-input__right-icon"
+};
+var Be = { key: 1 };
+var Se = { class: "n-input__error" };
+var Ae = defineComponent({
   inheritAttrs: false,
   __name: "NInput",
   props: {
@@ -313,79 +323,95 @@ var Ce = defineComponent({
     label: { default: void 0 },
     wrapperAttrs: { default: () => ({}) },
     labelAttrs: { default: () => ({}) },
-    color: { default: "primary" }
+    color: { default: "primary" },
+    type: { default: "text" }
   },
   emits: ["update:modelValue"],
   setup(e, { emit: s }) {
-    const a = e, { modelValue: n, label: o, type: c, errors: i, required: l, withVisibilityToggle: d, color: h, wrapperAttrs: k, labelAttrs: f } = toRefs(a);
-    function C(N) {
-      s("update:modelValue", N.target.value);
+    const l = e, { modelValue: n, label: o, type: i, errors: u, required: a, withVisibilityToggle: r, color: h, wrapperAttrs: C, labelAttrs: p } = toRefs(l);
+    function x(b) {
+      s("update:modelValue", b.target.value);
     }
-    const $ = ref(false);
-    function x() {
-      $.value = !$.value;
+    const w = ref(false);
+    function N() {
+      w.value = !w.value;
     }
-    return (N, Oe) => (openBlock(), createElementBlock("div", mergeProps({
+    const M = useSlots(), O = computed(() => M.rightIcon !== void 0), R = computed(() => M.leftIcon !== void 0);
+    if (r.value && O.value)
+      throw new Error("You shouldn't use both `with-visibility-toggle` and `rightIcon` slot at the same time, it will mess up with styling and honestly, would look hideous anyways!");
+    return (b, Re) => (openBlock(), createElementBlock("div", mergeProps({
       class: ["n-input", [`n--${unref(h)}`, `n-input--${unref(h)}`]]
-    }, unref(k)), [
+    }, unref(C)), [
       unref(o) ? (openBlock(), createElementBlock("label", mergeProps({
         key: 0,
-        for: N.$attrs.id,
+        for: b.$attrs.id,
         class: "n-input__label"
-      }, unref(f)), [
+      }, unref(p)), [
         createTextVNode(toDisplayString(unref(o)) + " ", 1),
-        unref(l) ? (openBlock(), createElementBlock("sup", $e, "*")) : createCommentVNode("", true)
-      ], 16, ve)) : createCommentVNode("", true),
-      createBaseVNode("input", mergeProps({
-        type: $.value ? "text" : unref(c),
-        value: unref(n),
-        class: "n-input__input",
-        onChange: C,
-        onInput: C
-      }, N.$attrs), null, 16, ge),
-      unref(i) && unref(i).length > 0 ? (openBlock(), createElementBlock("div", we, [
-        createBaseVNode("span", ke, toDisplayString(unref(i)[0]), 1)
-      ])) : createCommentVNode("", true),
-      unref(d) ? (openBlock(), createElementBlock("button", {
-        key: 2,
-        type: "button",
-        class: "n-input__visibility",
-        onClick: x
-      }, [
-        $.value ? (openBlock(), createBlock(_e, { key: 0 })) : (openBlock(), createBlock(ye, { key: 1 }))
+        unref(a) ? (openBlock(), createElementBlock("sup", Ce, "*")) : createCommentVNode("", true)
+      ], 16, ke)) : createCommentVNode("", true),
+      createBaseVNode("div", xe, [
+        b.$slots.leftIcon ? (openBlock(), createElementBlock("span", Ne, [
+          renderSlot(b.$slots, "leftIcon")
+        ])) : createCommentVNode("", true),
+        createBaseVNode("input", mergeProps({
+          type: w.value ? "text" : unref(i),
+          value: unref(n),
+          class: ["n-input__input", [
+            unref(r) ? "n-input__input--with-visibility-toggle" : "",
+            O.value ? "n-input__input--with-right-icon" : "",
+            R.value ? "n-input__input--with-left-icon" : ""
+          ]],
+          onChange: x,
+          onInput: x
+        }, b.$attrs), null, 16, Ie),
+        unref(r) ? (openBlock(), createElementBlock("button", {
+          key: 1,
+          type: "button",
+          class: "n-input__visibility",
+          onClick: N
+        }, [
+          w.value ? (openBlock(), createBlock(me, { key: 0 })) : (openBlock(), createBlock(we, { key: 1 }))
+        ])) : createCommentVNode("", true),
+        b.$slots.rightIcon ? (openBlock(), createElementBlock("span", Me, [
+          renderSlot(b.$slots, "rightIcon")
+        ])) : createCommentVNode("", true)
+      ]),
+      unref(u) && unref(u).length > 0 ? (openBlock(), createElementBlock("div", Be, [
+        createBaseVNode("span", Se, toDisplayString(unref(u)[0]), 1)
       ])) : createCommentVNode("", true)
     ], 16));
   }
 });
-var Ke = {
+var De = {
   install(e) {
-    e.component("n-switch", Ce);
+    e.component("n-switch", Ae);
   }
 };
-var xe = {
+var Ve = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "1em",
   height: "1em",
   viewBox: "0 0 24 24"
 };
-var Ne = createBaseVNode("path", {
+var Le = createBaseVNode("path", {
   fill: "currentColor",
   d: "m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L12 13.4Z"
 }, null, -1);
-var Me = [
-  Ne
+var Ee = [
+  Le
 ];
-var Be = defineComponent({
+var Oe = defineComponent({
   name: "MaterialSymbolsCloseRounded",
   __name: "XMark",
   setup(e) {
-    return (s, a) => (openBlock(), createElementBlock("svg", xe, Me));
+    return (s, l) => (openBlock(), createElementBlock("svg", Ve, Ee));
   }
 });
-var Ae = { class: "n-modal-header" };
-var Se = { class: "n-modal-body" };
-var Ve = { class: "n-modal-footer" };
-var Ie = defineComponent({
+var Te = { class: "n-modal-header" };
+var qe = { class: "n-modal-body" };
+var He = { class: "n-modal-footer" };
+var Ke = defineComponent({
   __name: "NModal",
   props: {
     closeOnOutsideClick: { type: Boolean, default: true },
@@ -396,51 +422,51 @@ var Ie = defineComponent({
     color: { default: "primary" }
   },
   setup(e, { expose: s }) {
-    const a = e, { closeOnOutsideClick: n, lockScroll: o, modelAttrs: c, modelOverlayAttrs: i } = toRefs(a), l = ref(false), d = ref(false), h = ref(0);
-    function k() {
-      l.value = true, o.value && (h.value = window.innerWidth - document.documentElement.clientWidth, document.body.style.paddingRight = `${h.value}px`, document.body.style.overflow = "hidden");
-    }
-    function f() {
-      l.value = false, o.value && setTimeout(() => {
-        document.body.style.overflow = "auto", document.body.style.paddingRight = "0px";
-      }, 300);
-    }
+    const l = e, { closeOnOutsideClick: n, lockScroll: o, modelAttrs: i, modelOverlayAttrs: u } = toRefs(l), a = ref(false), r = ref(false), h = ref(0);
     function C() {
-      l.value = !l.value;
+      a.value = true, o.value && (h.value = window.innerWidth - document.documentElement.clientWidth, document.body.style.paddingRight = `${h.value}px`, document.body.style.overflow = "hidden");
+    }
+    function p() {
+      a.value = false, o.value && setTimeout(() => {
+        document.body.style.overflow = "auto", document.body.style.paddingRight = "0px";
+      }, 200);
+    }
+    function x() {
+      a.value = !a.value;
     }
     s({
-      openModal: k,
-      closeModal: f,
-      toggleModal: C
+      openModal: C,
+      closeModal: p,
+      toggleModal: x
     });
-    function $() {
-      n.value ? f() : (d.value = true, setTimeout(() => {
-        d.value = false;
+    function w() {
+      n.value ? p() : (r.value = true, setTimeout(() => {
+        r.value = false;
       }, 500));
     }
-    return (x, N) => (openBlock(), createBlock(Teleport, { to: "body" }, [
+    return (N, M) => (openBlock(), createBlock(Teleport, { to: "body" }, [
       createVNode(Transition, { name: "n-modal" }, {
         default: withCtx(() => [
-          l.value ? (openBlock(), createElementBlock("div", mergeProps({
+          a.value ? (openBlock(), createElementBlock("div", mergeProps({
             key: 0,
-            class: ["n-modal", d.value ? "n-modal--shaking" : ""]
-          }, unref(c)), [
-            createBaseVNode("header", Ae, [
+            class: ["n-modal", r.value ? "n-modal--shaking" : ""]
+          }, unref(i)), [
+            createBaseVNode("header", Te, [
               createBaseVNode("h3", null, [
-                renderSlot(x.$slots, "modal-header")
+                renderSlot(N.$slots, "modal-header")
               ]),
               createBaseVNode("button", {
                 class: "n-modal__close-btn",
-                onClick: f
+                onClick: p
               }, [
-                createVNode(Be)
+                createVNode(Oe)
               ])
             ]),
-            createBaseVNode("div", Se, [
-              renderSlot(x.$slots, "modal-body")
+            createBaseVNode("div", qe, [
+              renderSlot(N.$slots, "modal-body")
             ]),
-            createBaseVNode("footer", Ve, [
-              renderSlot(x.$slots, "modal-footer")
+            createBaseVNode("footer", He, [
+              renderSlot(N.$slots, "modal-footer")
             ])
           ], 16)) : createCommentVNode("", true)
         ]),
@@ -448,36 +474,36 @@ var Ie = defineComponent({
       }),
       createVNode(Transition, {
         name: "n-modal-overlay",
-        onClick: $
+        onClick: w
       }, {
         default: withCtx(() => [
-          l.value ? (openBlock(), createElementBlock("div", mergeProps({
+          a.value ? (openBlock(), createElementBlock("div", mergeProps({
             key: 0,
             class: "n-modal-overlay"
-          }, unref(i)), null, 16)) : createCommentVNode("", true)
+          }, unref(u)), null, 16)) : createCommentVNode("", true)
         ]),
         _: 1
       })
     ]));
   }
 });
-var Pe = {
+var Ge = {
   install(e) {
-    e.component("n-modal", Ie);
+    e.component("n-modal", Ke);
   }
 };
-var Le = ["primary", "secondary", "success", "info", "warning", "danger", "light", "dark"];
-function Re(e) {
-  return Le.includes(e);
+var Pe = ["primary", "secondary", "success", "info", "warning", "danger", "light", "dark"];
+function Xe(e) {
+  return Pe.includes(e);
 }
-function T(e) {
-  const s = parseInt(e.slice(1, 3), 16), a = parseInt(e.slice(3, 5), 16), n = parseInt(e.slice(5, 7), 16);
-  return `${s}, ${a}, ${n}`;
+function H(e) {
+  const s = parseInt(e.slice(1, 3), 16), l = parseInt(e.slice(3, 5), 16), n = parseInt(e.slice(5, 7), 16);
+  return `${s}, ${l}, ${n}`;
 }
-function E(e, s = 1) {
-  return s >= 0 && s <= 1 ? `rgba(${T(e)}, ${s})` : `rgb(${T(e)})`;
+function K(e, s = 1) {
+  return s >= 0 && s <= 1 ? `rgba(${H(e)}, ${s})` : `rgb(${H(e)})`;
 }
-var A = {
+var S = {
   primary: {
     50: "#e8eaff",
     100: "#c0c2f5",
@@ -575,36 +601,36 @@ var A = {
     900: "#000000"
   }
 };
-function Ze(e) {
+function Ye(e) {
   e && Object.keys(e).forEach((o) => {
-    A[o] = e[o];
+    S[o] = e[o];
   });
-  const s = document.querySelector("html"), a = document.createElement("style");
+  const s = document.querySelector("html"), l = document.createElement("style");
   let n = "html { ";
-  Object.keys(A).forEach((o) => {
-    const c = A[o];
-    c && Object.keys(c).forEach((i) => {
-      const l = c[i];
-      n += `--n-color-${o}-${i}: ${E(l)};`, n += `--n-color-${o}-${i}-transparent: ${E(l, 0.3)};`;
+  Object.keys(S).forEach((o) => {
+    const i = S[o];
+    i && Object.keys(i).forEach((u) => {
+      const a = i[u];
+      n += `--n-color-${o}-${u}: ${K(a)};`, n += `--n-color-${o}-${u}-transparent: ${K(a, 0.3)};`;
     });
-  }), n += "}", a.innerHTML = n, s == null || s.appendChild(a);
+  }), n += "}", l.innerHTML = n, s == null || s.appendChild(l);
 }
 export {
-  G as NButton,
-  Ee as NButtonPlugin,
-  le as NCheckbox,
-  He as NCheckboxPlugin,
-  Ce as NInput,
-  Ke as NInputPlugin,
-  Ie as NModal,
-  Pe as NModalPlugin,
-  Q as NSwitch,
-  qe as NSwitchPlugin,
-  Le as builtinColorNames,
-  A as colors,
-  E as hexToRGB,
-  T as hexToRGBIntegers,
-  Re as isBuiltinColorName,
-  Ze as setColorPallete
+  J as NButton,
+  je as NButtonPlugin,
+  ue as NCheckbox,
+  We as NCheckboxPlugin,
+  Ae as NInput,
+  De as NInputPlugin,
+  Ke as NModal,
+  Ge as NModalPlugin,
+  te as NSwitch,
+  ze as NSwitchPlugin,
+  Pe as builtinColorNames,
+  S as colors,
+  K as hexToRGB,
+  H as hexToRGBIntegers,
+  Xe as isBuiltinColorName,
+  Ye as setColorPallete
 };
 //# sourceMappingURL=@nethren-ui_vue.js.map

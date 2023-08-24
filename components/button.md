@@ -191,10 +191,10 @@ function setLoading() {
 
 ## Props
 
-| Prop         | Purpose                       | Expected values                        | Default   |
-| ------------ | :---------------------------- | :------------------------------------- | :-------- |
-| mode         | mode of the button            | 'solid', 'outline', 'text'             | 'solid'   |
-| color        | color scheme of the button    | [Color scheme value ->](/theme/colors) | "primary" |
-| size         | size of the button            | 'sm', 'md'. 'normal', 'lg', 'xl'       | "normal"  |
-| is-loading   | Set loading state             | boolean                                | false     |
-| loading-text | Test to show in loading state | string                                 | undefined |
+| Prop         | Purpose                       | Expected values                            | Default     |
+| ------------ | :---------------------------- | :----------------------------------------- | :---------- |
+| mode         | mode of the button            | `'solid'`, `'outline'`, `'text'`           | `'solid'`   |
+| color        | color scheme of the button    | [Color scheme value ->](/theme/colors)     | `'primary'` |
+| size         | size of the button            | `'sm'`, `'md'`, '`normal'`, `'lg'`, `'xl'` | `'normal'`  |
+| is-loading   | Set loading state             | `boolean`                                  | `false`     |
+| loading-text | Test to show in loading state | `string`                                   | `undefined` |
