@@ -84,7 +84,7 @@ var J = defineComponent({
 });
 var je = {
   install(e) {
-    e.component("n-button", J);
+    e.component("NButton", J);
   }
 };
 var Q = ["aria-label", "aria-checked", "onKeydown", "onKeyup", "for"];
@@ -149,7 +149,7 @@ var te = defineComponent({
 });
 var ze = {
   install(e) {
-    e.component("n-switch", te);
+    e.component("NSwitch", te);
   }
 };
 var oe = (e) => (pushScopeId("data-v-30532f98"), e = e(), popScopeId(), e);
@@ -253,7 +253,7 @@ var ue = defineComponent({
 });
 var We = {
   install(e) {
-    e.component("n-switch", ue);
+    e.component("NCheckbox", ue);
   }
 };
 var de = {
@@ -385,7 +385,7 @@ var Ae = defineComponent({
 });
 var De = {
   install(e) {
-    e.component("n-switch", Ae);
+    e.component("NInput", Ae);
   }
 };
 var Ve = {
@@ -416,7 +416,7 @@ var Ke = defineComponent({
   props: {
     closeOnOutsideClick: { type: Boolean, default: true },
     witchCloseButton: { type: Boolean },
-    lockScroll: { type: Boolean, default: true },
+    lockScroll: { type: Boolean, default: false },
     modelAttrs: { default: () => ({}) },
     modelOverlayAttrs: { default: () => ({}) },
     color: { default: "primary" }
@@ -452,9 +452,7 @@ var Ke = defineComponent({
             class: ["n-modal", r.value ? "n-modal--shaking" : ""]
           }, unref(i)), [
             createBaseVNode("header", Te, [
-              createBaseVNode("h3", null, [
-                renderSlot(N.$slots, "modal-header")
-              ]),
+              renderSlot(N.$slots, "modal-header"),
               createBaseVNode("button", {
                 class: "n-modal__close-btn",
                 onClick: p
@@ -489,7 +487,7 @@ var Ke = defineComponent({
 });
 var Ge = {
   install(e) {
-    e.component("n-modal", Ke);
+    e.component("NModal", Ke);
   }
 };
 var Pe = ["primary", "secondary", "success", "info", "warning", "danger", "light", "dark"];
