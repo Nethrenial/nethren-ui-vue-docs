@@ -12,7 +12,7 @@ hero:
       link: /overview/getting-started
     - theme: alt
       text: View on github
-      link: https://github.com
+      link: https://github.com/Nethrenial/nethren-ui-vue
 
 features:
   - icon: 🛠️

@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import { setColorPallete } from '@nethren-ui/vue'
+import './tailwind.css'
 import './style.css'
 import "@nethren-ui/vue/dist/style.css"
 import { off } from 'process'
@@ -15,6 +16,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...\
+    // @ts-ignore
     if (!import.meta.env.SSR) {
       setColorPallete()
     }
